@@ -1,4 +1,4 @@
-FROM nginx:1.9
+FROM philplckthun/nginx
 MAINTAINER Phil Plückthun <phil@plckthn.me>
 
 RUN DEBIAN_FRONTEND=noninteractive \
