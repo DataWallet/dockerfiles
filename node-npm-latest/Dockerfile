@@ -3,3 +3,5 @@ FROM node:5.5
 RUN mv /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/.npm.DELETE
 RUN node /usr/local/lib/node_modules/.npm.DELETE/bin/npm-cli.js i -g npm@latest
 
+ENV NPM_CONFIG_LOGLEVEL "warn"
+
