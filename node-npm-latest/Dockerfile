@@ -1,4 +1,4 @@
-FROM node:5.7
+FROM node:5.8
 
 RUN mv /usr/local/lib/node_modules/npm /tmp/.npm && \
   node /tmp/.npm/bin/npm-cli.js i -g npm@latest && \
