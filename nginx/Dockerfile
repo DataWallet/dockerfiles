@@ -1,8 +1,8 @@
 FROM buildpack-deps:jessie
 MAINTAINER Phil Plückthun <phil@plckthn.me>
 
-ENV OPENSSL_VERSION 1.0.2f
-ENV NGINX_VERSION 1.9.10
+ENV OPENSSL_VERSION 1.0.2g
+ENV NGINX_VERSION 1.9.12
 
 RUN apt-get update && apt-get install -y \
   ca-certificates \
