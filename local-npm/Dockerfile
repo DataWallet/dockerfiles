@@ -8,5 +8,5 @@ ENTRYPOINT [ "local-npm", "-d", "/data" ]
 CMD [ "-p", "5080", "-u", "http://local-npm.dev:5080" ]
 
 VOLUME [ "/data" ]
-EXPOSE 5080
+EXPOSE 5080 16984
 
