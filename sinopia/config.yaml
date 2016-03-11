@@ -1,0 +1,27 @@
+storage: /data
+
+users:
+  admin:
+    password: 402ec99832efd2c784bb81d2856518f25630a654
+
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+    timeout: 10s
+    maxage: 2m
+
+packages:
+  '@*/*':
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+  '*':
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+
+logs:
+  - {type: stdout, format: pretty, level: http}
+
+ignore_latest_tag: false
+
