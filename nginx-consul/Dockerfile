@@ -1,7 +1,7 @@
 FROM philplckthun/nginx
 MAINTAINER Phil Plückthun <phil@plckthn.me>
 
-ENV CONSUL_TEMPLATE_VERSION 0.14.0
+ENV CONSUL_TEMPLATE_VERSION 0.15.0
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update -qq && \
