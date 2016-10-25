@@ -1,8 +1,8 @@
 FROM buildpack-deps:jessie
 MAINTAINER Phil Plückthun <phil@plckthn.me>
 
-ENV OPENSSL_VERSION 1.0.2j
-ENV NGINX_VERSION 1.11.4
+ENV OPENSSL_VERSION 1.1.0b
+ENV NGINX_VERSION 1.11.5
 
 RUN apt-get update && apt-get install -y \
   ca-certificates \
@@ -15,7 +15,10 @@ RUN cd /usr/src \
   && tar -xvzf /usr/src/openssl-${OPENSSL_VERSION}.tar.gz
 
 RUN cd /usr/src \
-  && git clone https://github.com/cloudflare/ngx_brotli_module.git ngx_brotli_module
+  && git clone https://github.com/cloudflare/ngx_brotli_module ngx_brotli \
+  && cd ngx_brotli \
+  && git submodule init \
+  && git submodule update
 
 RUN cd /usr/src \
   && curl -O http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
@@ -35,7 +38,7 @@ RUN cd /usr/src \
     --with-threads \
     --with-ipv6 \
     --with-http_gzip_static_module \
-    --add-module=/usr/src/ngx_brotli_module \
+    --add-module=/usr/src/ngx_brotli \
     --with-pcre \
     --with-openssl=/usr/src/openssl-${OPENSSL_VERSION} \
   && make \

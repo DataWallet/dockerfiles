@@ -1,8 +1,8 @@
 # nginx Dockerfile
 
-This Dockerfile compiles nginx `1.9.10` with:
+This Dockerfile compiles nginx `1.11.5` with:
 
-- OpenSSL 1.0.2f
+- OpenSSL 1.1.0b
 - HTTP/2 support (with SPDY fallback)
 - Brotli support
 
