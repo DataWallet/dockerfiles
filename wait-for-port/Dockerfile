@@ -1,4 +1,5 @@
 FROM debian:jessie
+MAINTAINER Nicolas Brugneaux <nicolas.brugneaux@gmail.com>
 
 RUN apt-get update \
   && apt-get -y install netcat

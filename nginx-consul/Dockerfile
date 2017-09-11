@@ -1,5 +1,5 @@
-FROM philplckthun/nginx
-MAINTAINER Phil Plückthun <phil@plckthn.me>
+FROM datawallet/dockerfiles:nginx
+MAINTAINER Nicolas Brugneaux <nicolas.brugneaux@gmail.com>
 
 ENV CONSUL_TEMPLATE_VERSION 0.16.0
 

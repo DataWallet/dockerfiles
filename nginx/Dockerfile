@@ -1,5 +1,5 @@
 FROM buildpack-deps:jessie
-MAINTAINER Phil Plückthun <phil@plckthn.me>
+MAINTAINER Nicolas Brugneaux <nicolas.brugneaux@gmail.com>
 
 ENV OPENSSL_VERSION 1.1.0d
 ENV NGINX_VERSION 1.11.9

@@ -1,4 +1,5 @@
 FROM node:8.4
+MAINTAINER Nicolas Brugneaux <nicolas.brugneaux@gmail.com>
 
 RUN mv /usr/local/lib/node_modules/npm /tmp/.npm && \
   node /tmp/.npm/bin/npm-cli.js i -g npm@latest && \
