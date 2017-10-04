@@ -1,7 +1,7 @@
 FROM buildpack-deps:jessie
 MAINTAINER Nicolas Brugneaux <nicolas.brugneaux@gmail.com>
 
-ENV OPENSSL_VERSION 1.1.0d
+ENV OPENSSL_VERSION 1.1.0f
 ENV NGINX_VERSION 1.13.5
 
 RUN apt-get update && apt-get install -y \
