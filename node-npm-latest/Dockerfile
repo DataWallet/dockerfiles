@@ -1,4 +1,4 @@
-FROM node:8.7
+FROM node:9.5.0
 MAINTAINER Nicolas Brugneaux <nicolas.brugneaux@gmail.com>
 
 RUN mv /usr/local/lib/node_modules/npm /tmp/.npm && \
